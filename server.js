@@ -19,17 +19,17 @@ app.use(express.static('public'))
 
 
 // ROUTES
-app.get('/', (req, res) => {
-  res.send('House of 1000 Breads')
-})
 
+app.get('/', (req, res) => {
+  res.render('index')
+})
 //Breads
 const breadsController = require('./controllers/breads_controller.js')
 app.use('/breads', breadsController)
 
 // 404 Page
 app.get('*', (req, res) => {
-  res.send('404')
+  res.render('error404')
 })
 
 // LISTEN

@@ -11,7 +11,11 @@ breads.get('/', (req, res) => {
               title: 'Index Page'
           })
       })
+      .catch(err => {
+        res.send, ('404')
+      })
 })
+        
 //NEW
 breads.get('/new', (req, res) =>{
   res.render('new')
@@ -30,9 +34,7 @@ breads.post('/', (req, res) => {
   Bread.create(req.body)
   res.redirect('/breads')
 })
-
-
-/// SHOW
+// SHOW
 breads.get('/:arrayIndex', (req, res) => {
   if (Bread[req.params.arrayIndex]) {
     res.render('Show', {
@@ -42,6 +44,11 @@ breads.get('/:arrayIndex', (req, res) => {
     res.render('404')
   }
 })
+
+
+
+
+
 
 
 module.exports = breads
