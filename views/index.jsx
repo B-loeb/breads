@@ -19,9 +19,19 @@ function Index ({breads})  {
             })
         }
         </ul>
+        //BUTTON FOR NEW
+    <div className="newButton">
+       <a href="/breads/new"><button>Add a new bread</button></a>
+    </div>
+//Back Button
+    <div className="backButton">
+        <a href="/breads"><button>Go back to the index</button></a>
+    </div>
       </Default>
     )
 }
+
+
 
 
 module.exports = Index

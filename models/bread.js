@@ -9,6 +9,7 @@ const breadSchema = new Schema({
     hasGluten: Boolean,
     image: { type: String, default: 'http://placehold.it/500x500.png' }
 })
+//routes
 
 // model and export 
 const Bread = mongoose.model('Bread', breadSchema)
